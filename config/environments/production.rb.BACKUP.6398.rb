@@ -32,7 +32,11 @@ Themis::Application.configure do
   config.serve_static_assets = false
 
   # Enable serving of images, stylesheets, and javascripts from an asset server
+<<<<<<< HEAD
   # config.action_controller.asset_host = "your.static.url.here"
+=======
+  # config.action_controller.asset_host = "http://static.url.here"
+>>>>>>> 8fa22f8d7fa0dd8f46e9fc62fa452bea64e48cc7
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
