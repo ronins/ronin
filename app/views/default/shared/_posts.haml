@@ -2,13 +2,13 @@
   - if defined?(title)
     %h1= title
 
-  %ul#posts
+  %ul#posts.posts
     - posts.each do |post|
       %li.post
         %h2= link_to post.title, post_path(post)
         .author
           = post.author.name
-          = raw gravatar_for post.author, :class => "image"
+          = raw gravatar_for post.author
         %time{:pubdate => post.created_at}= post.created_at
         .body= raw post.body.to_html
         %ul.tags
