@@ -1,4 +1,5 @@
 %p= link_to "New post", new_panel_post_path, :class => "new-post"
 
-- Post.all.each do |post|
-  %p= link_to post.title, edit_panel_post_path(post)
+%ul
+  - Post.all.each do |post|
+    %li= link_to post.title, edit_panel_post_path(post)
