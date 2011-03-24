@@ -42,7 +42,8 @@ end
 Then /^I should see the xml file with sitemap tags$/ do
   post = Post.published.first
   Then %{I should see "#{post_url(post)}" within "loc"}
-  Then %{I should see "#{post.updated_at}" within "lastmod"}
+  Then %{I should see "#{post.updated_at.strftime("%Y-%m-%d")}" within "lastmod"}
+  Then %{I should not see "#{post.updated_at.strftime("%H:%M:%S")} UTC" within "lastmod"}
 end
 
 Then /^I should see gravatar image$/ do
