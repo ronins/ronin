@@ -6,10 +6,6 @@ Themis::Application.routes.draw do
       match 'pages/:page' => 'posts#index', :as => 'page'
     end
   end
-  match 'admin' => 'admin/users#index', :as => 'admin'
-  namespace 'admin' do
-    resources :users
-  end
   match 'panel' => 'panel/posts#new', :as => 'panel'
   namespace 'panel' do
     resources :posts do

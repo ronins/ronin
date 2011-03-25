@@ -4,6 +4,14 @@ GIT
   specs:
     aasm (2.2.0)
 
+GIT
+  remote: git://github.com/sferik/rails_admin.git
+  revision: 01974b1e5597c07b949034b905ae5c9ceb1cdda8
+  specs:
+    rails_admin (0.0.1)
+      builder (~> 2.1.0)
+      rails (~> 3.0.3)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -274,6 +282,7 @@ DEPENDENCIES
   newrelic_rpm (>= 2.13.0.beta5)
   pickle (>= 0.4.2)
   rails (= 3.0.5)
+  rails_admin!
   remarkable (>= 4.0.0.alpha4)
   remarkable_activemodel (>= 4.0.0.alpha4)
   remarkable_activerecord (>= 4.0.0.alpha4)
