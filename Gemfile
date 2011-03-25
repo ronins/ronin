@@ -22,6 +22,10 @@ gem "acts-as-taggable-on", ">= 2.0.6"
 gem "aasm", :git => "git://github.com/rubyist/aasm.git"
 gem "metric_fu"
 
+group :development do
+  gem "faker"
+end
+
 group :production do
   gem "mysql", ">=2.8.1"
   gem 'newrelic_rpm', '>=2.13.0.beta5'
