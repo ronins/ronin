@@ -1,18 +1,19 @@
---- 
-javascripts: 
-- base: 
+---
+javascripts:
+- base:
   - rails
   - highlight.pack
 - panel:
   - jquery.markitup.pack
   - markitup.set
-stylesheets: 
-- ie: 
+stylesheets:
+- ie:
   - ie
 - screen:
   - screen
 - print:
   - print
 - panel:
+  - panel
   - textile_style
   - markitup_style
