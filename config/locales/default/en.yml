@@ -3,11 +3,11 @@
 
 en:
   administration: Administration
-  edit: Edit
-  destroy: Destroy
-  new: New
-  search: Search
   activerecord:
     attributes:
       user:
         approver: Approver?
+  destroy: Destroy
+  edit: Edit
+  new: New
+  search: Search
