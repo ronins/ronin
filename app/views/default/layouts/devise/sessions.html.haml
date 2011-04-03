@@ -1,18 +1,16 @@
-!!! XML
-!!!
+!!! 5
 %html
   %head
-    %title= configuration['name'] 
-    = stylesheet_link_tag 'screen', :media => 'screen, projection'
-    = stylesheet_link_tag 'print', :media => 'print'
+    %title= configuration['name']
+    =raw stylesheet_link_merged 'user', :media => 'screen, projection'
     /[if lt IE 8]
       = stylesheet_link_tag 'ie', :media => 'screen, projection'
     = csrf_meta_tag
   %body
     #container
-      #header
+      %header
         %h1= link_to configuration['name'], root_path
-      #content
+      %section#content
         .message= flash[:alert]
         = yield
     %script{ :type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" }
