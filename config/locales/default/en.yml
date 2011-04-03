@@ -9,5 +9,8 @@ en:
         approver: Approver?
   destroy: Destroy
   edit: Edit
+  formtastic:
+    actions:
+      go: "Go!"
   new: New
   search: Search
