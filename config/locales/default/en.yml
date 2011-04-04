@@ -11,6 +11,6 @@ en:
   edit: Edit
   formtastic:
     actions:
-      go: "Go!"
+      sign_in: "Sign in"
   new: New
   search: Search

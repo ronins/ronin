@@ -32,7 +32,7 @@ body{
       @include border-radius(10px);
       @include clearfix;
       fieldset{
-        width: 700px;
+        width: 680px;
         margin: 0;
         padding: 20px 0 20px 20px;
         float: left;
@@ -51,7 +51,7 @@ body{
           @include clearfix;
           li{
             float: left;
-            width: 349px;
+            width: 340px;
             &.rememberme{
               input, label{
                 display: inline;
