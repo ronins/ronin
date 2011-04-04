@@ -16,6 +16,14 @@ body{
       font-size: 18px;
       font-style: italic;
     }
+    div.message{
+      margin: 0px 75px;
+      padding: 5px 10px;
+      border: 1px solid red;
+      @include border-radius(3px);
+      font-size: 15px;
+      text-align: center;
+    }
     form{
       border: 1px solid #ccc;
       margin: 0 auto;
