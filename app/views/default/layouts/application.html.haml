@@ -1,12 +1,9 @@
 !!! 5
 %html
   %head
-    =raw stylesheet_link_merged 'screen', :media => 'screen, projection'
-    =raw stylesheet_link_merged 'print', :media => 'print'
-    /[if lt IE 8]
-      =raw stylesheet_link_merged 'ie', :media => 'screen, projection'
-    = csrf_meta_tag
     = yield :head
+    = yield :stylesheets
+    = csrf_meta_tag
   %body
     #container
       %header= yield :header
