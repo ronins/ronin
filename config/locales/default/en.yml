@@ -13,4 +13,7 @@ en:
     actions:
       sign_in: "Sign in"
   new: New
+  panel:
+    navigation:
+      sign_out: Logout
   search: Search
