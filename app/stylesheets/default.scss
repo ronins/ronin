@@ -53,6 +53,10 @@ body {
     @include column($content-columns); 
   }
     
+  ul, ol {
+    list-style: none;
+  }
+
   form {
     @include blueprint-form;
 
