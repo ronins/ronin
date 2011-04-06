@@ -9,12 +9,15 @@
         = render 'shared/header_post', :post => post
         %article
           = raw post.abstract.to_html if post.abstract
-        %ul.tags
-          - post.tags.map do |tag|
-            %li= link_to tag.name, tags_path(tag.name)
         .comments
+          %h6 Comentários
           = link_to("Add comment", post_path(post, :anchor => "disqus_thread"))
           = raw disqus_comment_counts
+        .tags
+          %h6 Tags
+          %ul
+            - post.tags.map do |tag|
+              %li= link_to tag.name, tags_path(tag.name)
 
   .paginate
     = will_paginate posts

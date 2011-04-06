@@ -21,6 +21,11 @@
 $sidebar-columns: floor($blueprint-grid-columns / 4);
 $content-columns: $blueprint-grid-columns - $sidebar-columns;
 
+// Colors
+$title-color: #333;
+$links-color: #333;
+$border-color: #BBB;
+
 body {
   @include blueprint-typography(true);
   @include blueprint-utilities;
@@ -38,9 +43,9 @@ body {
     }
 
     li.post, div.post {
-      margin-bottom: 5px;
-      padding-bottom: 15px;
-      border-bottom: 1px #BBB solid;
+      background: image-url("default/bg_post.png") repeat;
+      margin-bottom: 15px;
+      padding: 10px;
 
       h2 {
     
@@ -59,6 +64,61 @@ body {
       
       article {
         font-size: 14px;
+      }
+
+      .comments {
+        margin: 0 0 10px 0;
+        padding: 10px 0;
+        border-top: 1px $border-color solid;
+        border-bottom: 1px $border-color solid;
+
+        h6 {
+          background: image-url("default/comments.png") no-repeat left;
+          color: $title-color;
+          font-size: 14px;
+          line-height: 16px;
+          margin: 0 0 5px 0;
+          padding: 0 0 0 20px;
+        }
+        
+        a {
+          color: $links-color;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .tags {
+        h6 {
+          background: image-url("default/tag_orange.png") no-repeat left;
+          color: $title-color;
+          font-size: 14px;
+          line-height: 16px;
+          margin: 0 0 5px 0;
+          padding: 0 0 0 20px;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          
+          li {
+            margin: 0 5px 0 0;
+            display: inline;
+
+            a {
+              color: $links-color;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
       }
     }
   }
