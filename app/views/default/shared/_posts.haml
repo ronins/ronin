@@ -7,10 +7,14 @@
       %li.post
         %h2= link_to post.title, post_path(post)
         .author
-          = post.author.name
           = raw gravatar_for post.author
-        %time{:pubdate => post.created_at}= post.created_at
-        %article= raw post.abstract.to_html if post.abstract
+          %p
+            Publicado em 
+            %time{:pubdate => post.created_at}= post.created_at.strftime("%d/%m/%Y - %H:%M") 
+            por 
+            = post.author.name
+        %article
+          = raw post.abstract.to_html if post.abstract
         %ul.tags
           - post.tags.map do |tag|
             %li= link_to tag.name, tags_path(tag.name)
