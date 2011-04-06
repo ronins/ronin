@@ -39,6 +39,7 @@ body {
     @include container;
 
     ul#posts {
+      margin: 0;
       padding: 0;
     }
 
@@ -198,6 +199,12 @@ body {
     h2 {
       font-size: 18px;
     }
+  }
+
+  footer {
+    margin: 10px 0;
+    padding-top: 10px;
+    border-top: 1px $border-color solid;
   }
 
   form {
