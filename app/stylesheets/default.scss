@@ -27,6 +27,8 @@ body {
   @include blueprint-debug;
   @include blueprint-interaction;
   @include blueprint-scaffolding;
+  background: image-url("default/bg.png") repeat;
+  font-family: Arial, sans-serif;
 
   #container {
     @include container;
@@ -55,6 +57,32 @@ body {
     
   ul, ol {
     list-style: none;
+  }
+
+  header {
+    margin: 0 0 10px 0;
+    border-bottom: 1px #BBB solid;
+
+    h1 {
+      color: #CCC;
+      font-size: 46px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 20px 0 10px 0;
+
+      a {
+        color: #333 !important;
+        text-decoration: none;
+
+        &:hover {
+          color: #DDD;
+        }
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+    }
   }
 
   form {

@@ -14,6 +14,7 @@
 
 - content_for :header do
   %h1= link_to configuration['name'], root_path
+  %h2= configuration['description']
 
 - content_for :sidebar do
   = form_tag 'http://google.com/search', :method => :get do
