@@ -72,6 +72,21 @@ body {
           font-size: 14px;
           line-height: 50px;
         }
+
+        time {
+          span {
+            line-height: 16px;
+            padding-left: 20px;
+
+            &.date {
+              background: image-url("default/date.png") no-repeat left;
+            }
+
+            &.time {
+              background: image-url("default/time.png") no-repeat left;
+            }
+          }
+        }
       }
       
       article {
