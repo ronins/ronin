@@ -44,11 +44,23 @@ body {
 
     li.post, div.post {
       background: image-url("default/bg_post.png") repeat;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       padding: 10px;
 
       h2 {
-    
+        color: $title-color;
+        font-style: italic;
+        padding-bottom: 5px;
+        border-bottom: 1px $border-color solid;
+
+        a {
+          color: $title-color;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
       
       .author {
@@ -150,7 +162,6 @@ body {
 
   header {
     margin: 0 0 10px 0;
-    border-bottom: 1px #BBB solid;
 
     h1 {
       color: #CCC;
