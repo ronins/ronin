@@ -1,6 +1,7 @@
 = yield
 
 - content_for :stylesheets do
+  = raw stylesheet_link_merged 'panel', :media => 'screen'
 
 - content_for :head do
   %meta{ :name => "keywords", :content => keywords }
