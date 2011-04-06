@@ -35,30 +35,30 @@ body {
 
     ul#posts {
       padding: 0;
+    }
 
-      li.post {
-        margin-bottom: 5px;
-        padding-bottom: 15px;
-        border-bottom: 1px #BBB solid;
+    li.post, div.post {
+      margin-bottom: 5px;
+      padding-bottom: 15px;
+      border-bottom: 1px #BBB solid;
 
-        h2 {
+      h2 {
+    
+      }
       
+      .author {
+        img {
+          margin: 0 5px 0 0;
+          float: left;
         }
-        
-        .author {
-          img {
-            margin: 0 5px 0 0;
-            float: left;
-          }
-          p {
-            font-size: 14px;
-            line-height: 50px;
-          }
-        }
-        
-        article {
+        p {
           font-size: 14px;
+          line-height: 50px;
         }
+      }
+      
+      article {
+        font-size: 14px;
       }
     }
   }

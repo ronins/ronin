@@ -1,0 +1,7 @@
+.author
+  = raw gravatar_for post.author
+  %p
+    Publicado em 
+    %time{:pubdate => post.created_at}= post.created_at.strftime("%d/%m/%Y - %H:%M") 
+    por 
+    = post.author.name

@@ -1,9 +1,7 @@
 = render :layout => "layouts/public", :locals => {:title => @post.title} do
   .post
-    %h2.title= @post.title
-    .author_image=raw gravatar_for @post.author
-    .author= @post.author.name
-    .date= @post.created_at
+    %h2= @post.title
+    = render "shared/header_post", :post => @post
     .body= raw @post.body.to_html
     .tags 
       - @post.tags.map do |tag| 

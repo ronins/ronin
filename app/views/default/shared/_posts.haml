@@ -6,13 +6,7 @@
     - posts.each do |post|
       %li.post
         %h2= link_to post.title, post_path(post)
-        .author
-          = raw gravatar_for post.author
-          %p
-            Publicado em 
-            %time{:pubdate => post.created_at}= post.created_at.strftime("%d/%m/%Y - %H:%M") 
-            por 
-            = post.author.name
+        = render 'shared/header_post', :post => post
         %article
           = raw post.abstract.to_html if post.abstract
         %ul.tags
