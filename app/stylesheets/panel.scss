@@ -1,20 +1,9 @@
-body{
-  background: #f7f7f7;
-  form fieldset{
-    margin: 0;
-    li{
-      margin: 0 0 10px 0;
+@import "default";
       label{
         display: block;
-        font: normal normal 18px Verdana;
         abbr{
-          opacity: 0.2;
         }
       }
-      input, input[type=text]{
-        margin: 0;
-        padding: 5px 5px;
-        font: normal normal 15px Verdana
       }
     }
   }

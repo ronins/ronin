@@ -13,6 +13,7 @@
   %h1= link_to configuration['name'], root_path
   %nav
     %ul
+      %li= link_to t("panel.navigation.new_post"), new_panel_post_path
       %li= link_to t("panel.navigation.sign_out"), destroy_user_session_path
 
 - content_for :sidebar do
