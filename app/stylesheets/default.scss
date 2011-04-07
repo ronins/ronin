@@ -44,6 +44,7 @@ body {
     }
 
     li.post, div.post {
+      @include border-radius(10px);
       background: image-url("default/bg_post.png") repeat;
       margin-bottom: 20px;
       padding: 10px;
