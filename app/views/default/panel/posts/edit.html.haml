@@ -1,5 +1,6 @@
-%h1 Editing post
+= render :layout => "layouts/panel", :locals => { :title => (defined?(title) ? title : configuration['description']) } do
+  %h1 Editing post
 
-= render 'form'
+  = render 'form'
 
-= link_to "Publish", publish_panel_post_path(@post), :method => :put
+  = link_to "Publish", publish_panel_post_path(@post), :method => :put
