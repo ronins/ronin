@@ -26,6 +26,8 @@ Spork.prefork do
   # prefer to use XPath just remove this line and adjust any selectors in your
   # steps to use the XPath syntax.
   Capybara.default_selector = :css
+  require 'akephalos'
+  Capybara.javascript_driver = :akephalos
 end
 
 Spork.each_run do
