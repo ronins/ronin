@@ -47,6 +47,7 @@ group :cucumber do
   gem "spork", ">=0.8.4"
   gem "pickle", ">=0.4.2"
   gem "launchy"
+  gem "akephalos"
 end
 
 gem "inploy", ">=1.9"
