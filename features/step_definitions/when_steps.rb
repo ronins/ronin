@@ -29,6 +29,6 @@ end
 When /^I fill the post form$/ do
   When %{I fill in "Title" with "My post"}
   When %{I fill in "Body" with "My test post"}
-  When %{I fill in "Abstract" with "My test post"}
+  When %{I fill in "Description" with "My description of test post"}
   When %{I fill in "Tag list" with "test, general"}
 end
