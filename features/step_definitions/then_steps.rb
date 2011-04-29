@@ -14,6 +14,10 @@ Then /^I should see blog description as meta tag$/ do
   page.should have_xpath("//meta[@name='description'][@content='#{Themis::Config['description']}']")
 end
 
+Then /^I should see post description as meta tag$/ do
+  page.should have_xpath("//meta[@name='description'][@content='#{Post.last.description}']")
+end
+
 Then /^I should see "([^\"]*)" tags as html meta tags$/ do |title|
   post = Post.find_by_title(title)
   Then %{I should see "#{post.tag_list}" as html meta tags}

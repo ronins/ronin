@@ -33,3 +33,10 @@ Feature: Show Posts
     When I visit "/posts.rss"
     Then I should see 5 rss items
     And I should see blog information
+
+
+  Scenario: Post
+    Given a post exists with title: "My Post", body: "Simple *post* about me", description: "my description", aasm_state: "published"
+    When I go to the home page
+    And follow "My Post"
+    Then I should see post description as meta tag
