@@ -1,4 +1,4 @@
-= render :layout => "layouts/public", :locals => {:title => @post.title} do
+= render :layout => "layouts/public", :locals => {:title => @post.title, :description => @post.description} do
   .post
     %h2= @post.title
     = render "shared/header_post", :post => @post
@@ -9,5 +9,5 @@
     .tags
       %h6 Tags
       %ul
-        - @post.tags.map do |tag| 
+        - @post.tags.map do |tag|
           %li= link_to tag.name, tags_path(tag.name)
