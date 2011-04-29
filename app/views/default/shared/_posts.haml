@@ -8,7 +8,7 @@
         %h2= link_to post.title, post_path(post)
         = render 'shared/header_post', :post => post
         %article
-          = raw post.abstract.to_html if post.abstract
+          = raw post.body.to_html
         .comments
           %h6 Comentários
           = link_to("Add comment", post_path(post, :anchor => "disqus_thread"))
