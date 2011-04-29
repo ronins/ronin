@@ -14,14 +14,14 @@ describe Panel::PostsController do
 
     describe "POST create" do
       it "should create a post for the logged user" do
-        post :create, :post =>  { :title => "Title", :body => "Body", :abstract => "Abstract Post" }
+        post :create, :post =>  { :title => "Title", :body => "Body" }
         Post.first.author.should == controller.current_user
       end
 
       it "should not expire the blog index page cache" do
         file_name = "#{CACHE_PATH}/index.html"
         File.open file_name, 'w'
-        post :create, :post =>  { :title => "Title", :body => "Body", :abstract => "Abstract Post"  }
+        post :create, :post =>  { :title => "Title", :body => "Body", :description => "Description of body"  }
         File.exist?(file_name).should be_true
       end
 
@@ -30,28 +30,28 @@ describe Panel::PostsController do
         file_name = "#{path}/1.html"
         FileUtils.mkdir_p path
         File.open file_name, 'w'
-        post :create, :post =>  { :title => "Title", :body => "Body", :abstract => "Abstract Post"  }
+        post :create, :post =>  { :title => "Title", :body => "Body" }
         File.exist?(file_name).should be_true
       end
     end
 
     describe "PUT update" do
       it "should not update the owner" do
-        put :update, :id => post_object.id, :post => { :title => "Title", :body => "Body", :abstract => "Abstract Post"  }
+        put :update, :id => post_object.id, :post => { :title => "Title", :body => "Body" }
         Post.last.author.should_not == controller.current_user
       end
 
       it "should expire the blog index page cache" do
         file_name = "#{CACHE_PATH}/index.html"
         File.open file_name, 'w'
-        put :update, :id => post_object.id, :post => { :title => "Title", :body => "Body", :abstract => "Abstract Post"  }
+        put :update, :id => post_object.id, :post => { :title => "Title", :body => "Body" }
         File.exist?(file_name).should be_false
       end
 
       it "should expire the sitemap.xml" do
         file_name = "#{CACHE_PATH}/sitemap.xml"
         File.open file_name, 'w'
-        put :update, :id => post_object.id, :post => { :title => "Title", :body => "Body", :abstract => "Abstract Post"  }
+        put :update, :id => post_object.id, :post => { :title => "Title", :body => "Body"  }
         File.exist?(file_name).should be_false
       end
 
@@ -60,7 +60,7 @@ describe Panel::PostsController do
         file_name = "#{path}/1.html"
         FileUtils.mkdir_p path
         File.open file_name, 'w'
-        put :update, :id => post_object.id, :post => { :title => "Title", :body => "Body", :abstract => "Abstract Post"  }
+        put :update, :id => post_object.id, :post => { :title => "Title", :body => "Body" }
         File.exist?(file_name).should be_false
       end
     end
