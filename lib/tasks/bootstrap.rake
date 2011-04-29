@@ -3,6 +3,6 @@ namespace :db do
   task :bootstrap => %w(db:setup) do
     Admin.create! :email => "admin@themis.com", :password => "abc123"
     user = User.create! :name => "Chuck Norris", :email => "chuck@themis.com", :password => "abc123"
-    15.times { Post.create!(:title => Faker::Lorem.sentence, :body => Faker::Lorem.paragraphs, :abstract => Faker::Lorem.paragraphs, :author => user).publish! } 
+    15.times { Post.create!(:title => Faker::Lorem.sentence, :body => Faker::Lorem.paragraphs, :description => Faker::Lorem.paragraphs, :author => user).publish! }
   end
 end
