@@ -1,1 +1,1 @@
-script: "RAILS_ENV=test bundle exec rspec spec"
+script: "RAILS_ENV=test rake travis:build "
