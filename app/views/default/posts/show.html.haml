@@ -1,13 +1,11 @@
 = render :layout => "layouts/public", :locals => {:title => @post.title, :description => @post.description} do
   .post
-    %h2= @post.title
-    = render "shared/header_post", :post => @post
-    %article= raw @post.body.to_html
-    .comments
-      %h6 Comentários
-      = raw disqus_thread
+    %h2.title= @post.title
+    .author_image=raw gravatar_for @post.author
+    .author= @post.author.name
+    .date= @post.created_at
+    .body= raw @post.body.to_html
     .tags
-      %h6 Tags
-      %ul
-        - @post.tags.map do |tag|
-          %li= link_to tag.name, tags_path(tag.name)
+      - @post.tags.map do |tag|
+        = link_to tag.name, tags_path(tag.name)
+    .comments= raw disqus_thread
