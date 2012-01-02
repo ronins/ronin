@@ -17,6 +17,7 @@ GEM
   specs:
     RedCloth (4.2.3)
     Saikuro (1.1.0)
+    ZenTest (4.6.2)
     abstract (1.0.0)
     actionmailer (3.0.11)
       actionpack (= 3.0.11)
@@ -50,6 +51,8 @@ GEM
       jruby-jars
     arel (2.0.10)
     arrayfields (4.7.4)
+    autotest (4.4.6)
+      ZenTest (>= 4.4.1)
     babosa (0.2.2)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
@@ -164,8 +167,8 @@ GEM
       rcov (>= 0.8.3.3)
       reek (>= 1.2.6)
       roodi (>= 2.1.0)
-    mysql2 (0.3.2)
     mime-types (1.17.2)
+    mysql2 (0.3.11)
     net-ldap (0.1.1)
     newrelic_rpm (2.13.3)
     nokogiri (1.4.4)
@@ -270,6 +273,7 @@ DEPENDENCIES
   aasm!
   acts-as-taggable-on (>= 2.0.6)
   akephalos
+  autotest
   capybara (= 0.3.9)
   compass (= 0.10.6)
   cucumber (>= 0.9.4)
@@ -293,7 +297,7 @@ DEPENDENCIES
   mysql2
   newrelic_rpm (>= 2.13.0.beta5)
   pickle (>= 0.4.2)
-  rails (= 3.0.6)
+  rails (~> 3.0.0)
   rails_admin!
   remarkable (>= 4.0.0.alpha4)
   remarkable_activemodel (>= 4.0.0.alpha4)
