@@ -34,10 +34,11 @@ Feature: Show Posts
     Then I should see 5 rss items
     And I should see blog information
 
-  Scenario: RSS with valid date-time using RFC822
-    Given a dated post exist
+  Scenario: valid RSS (using RFC822 and  RFC2822)
+    Given a special post exist
     When I visit "/posts.rss"
     Then I should see "Sun, 01 Jan 2012 01:01:01 +0000"
+    And I should see "jonh@jonh.com (Jonh)"
 
   Scenario: Post
     Given a post exists with title: "My Post", body: "Simple *post* about me", description: "my description", aasm_state: "published"
