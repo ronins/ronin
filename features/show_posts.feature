@@ -34,6 +34,11 @@ Feature: Show Posts
     Then I should see 5 rss items
     And I should see blog information
 
+  Scenario: RSS with valid date-time using RFC822
+    Given a dated post exist
+    When I visit "/posts.rss"
+    Then I should see "Sun, 01 Jan 2012 01:01:01 +0000"
+
   Scenario: Post
     Given a post exists with title: "My Post", body: "Simple *post* about me", description: "my description", aasm_state: "published"
     When I go to the home page
