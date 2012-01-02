@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem "rails", "=3.0.6"
+gem "rails", "~> 3.0.0"
 
 gem "json_pure", "=1.4.6"
 
@@ -37,6 +37,7 @@ group :test do
   gem "remarkable_activemodel", ">=4.0.0.alpha4"
   gem "remarkable_activerecord", ">=4.0.0.alpha4"
   gem "factory_girl_rails"
+  gem 'autotest'
 end
 
 group :cucumber do

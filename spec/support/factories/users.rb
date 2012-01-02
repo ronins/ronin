@@ -12,3 +12,8 @@ end
 Factory.define :approver_user, :parent => :user do |f|
   f.approver true
 end
+
+Factory.define :user_jonh, :parent => :user do |f|
+  f.name "Jonh"
+  f.email "jonh@jonh.com"
+end
