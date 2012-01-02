@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   caches_page :sitemap
 
   def sitemap
-    @posts = Post.all
+    @posts = Post.published
   end
 end

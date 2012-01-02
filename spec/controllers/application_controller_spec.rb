@@ -7,5 +7,12 @@ describe ApplicationController do
       get :sitemap, :format => :xml
       File.exist?("#{CACHE_PATH}/sitemap.xml").should be_true
     end
+
+    it "should assigns only published posts" do
+      2.times.each { Factory :published_post }
+      4.times.each { Factory :post }
+      get :sitemap, :format => :xml
+      assigns(:posts).count.should == 2
+    end
   end
 end
