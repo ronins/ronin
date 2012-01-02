@@ -1,6 +1,6 @@
 source "http://rubygems.org"
 
-gem "rails", "=3.0.6"
+gem "rails", "~> 3.0.0"
 
 gem "json_pure", "=1.4.6"
 
